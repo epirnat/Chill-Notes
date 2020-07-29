@@ -9,3 +9,11 @@ const notes = [ {
   body: 'Look up cool bird facts'
 }];
 
+const findNote = function (notes, noteTitle) {
+  return notes.find(function (note, index) {
+    return note.title.toLowerCase() === noteTitle.toLowerCase();
+  });
+};
+
+const note = findNote(notes, 'trip ideas');
+console.log(note);
