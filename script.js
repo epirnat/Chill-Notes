@@ -1,6 +1,6 @@
 const notes = [ {
   title: 'Trip ideas',
-  body: 'Go to Bled'
+  body: 'Kamnik > Pariz'
 }, {
   title: 'Books to read',
   body: 'Deep Work by Cal Newport'
@@ -8,6 +8,19 @@ const notes = [ {
   title: 'For later',
   body: 'Look up cool bird facts'
 }];
+
+// function that sorts notes by alphabetical order
+const sortNotes = function (notes) {
+  notes.sort(function (a, b) {
+    if (a.title.toLowerCase() < b.title.toLowerCase()) {
+      return -1
+    } else if (b.title.toLowerCase() < a.title.toLowerCase()) {
+      return 1
+    } else {
+      return 0
+    }
+  })
+}
 
 // function that finds a specific note via note title
 const findNote = function (notes, noteTitle) {
@@ -17,9 +30,9 @@ const findNote = function (notes, noteTitle) {
 };
 
 const note = findNote(notes, 'trip ideas');
-console.log(note);
+// console.log(note);
 
-//function that finds a note just by querying part of the title
+// function that finds a note just by querying part of the title
 
 const findNotes = function(notes, query) {
   return notes.filter(function (note, index) {
@@ -29,6 +42,7 @@ const findNotes = function(notes, query) {
   })
 }
 
+sortNotes(notes);
+console.log(notes)
 
-
-console.log(findNotes(notes,'to'));
+// console.log(findNotes(notes,'to'));
