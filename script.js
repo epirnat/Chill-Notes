@@ -1,4 +1,4 @@
-const notes = [ {
+const notes = [{
   title: 'Trip ideas',
   body: 'Kamnik > Pariz'
 }, {
