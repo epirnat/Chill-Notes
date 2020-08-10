@@ -28,3 +28,8 @@ const renderNotes = function (notes, filters) {
 };
 
 renderNotes(notes, filters);
+
+document.querySelector('#search-text').addEventListener('input', function (e) {
+  filters.searchText = e.target.value
+  renderNotes(notes, filters)
+})
