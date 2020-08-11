@@ -44,3 +44,7 @@ document.querySelector('#name-form').addEventListener('submit', function (e) {
   console.log(e.target.elements.firstName.value);
   e.target.elements.firstName.value = '';
 })
+
+document.querySelector('#check').addEventListener('change', function (e) {
+  console.log(e.target.checked);
+})
